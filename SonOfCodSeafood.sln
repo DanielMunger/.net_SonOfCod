@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{448F41F1-318B-473E-AE8B-422E3099FEFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{27EDAC42-AC8D-45B0-BFD9-E46BCB0D1967}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SonOfCodSeafood", "src\SonOfCodSeafood\SonOfCodSeafood.xproj", "{73694D69-F720-464B-80A8-7B37FEF69FAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4204A6E1-BEB9-4EBA-8E38-A612E76079FD}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SonOfCodSeafoodTests.cs", "SonOfCodSeafoodTests.cs\SonOfCodSeafoodTests.cs.xproj", "{659A037B-9AC0-4CE2-B50D-04B01CA77D62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73694D69-F720-464B-80A8-7B37FEF69FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73694D69-F720-464B-80A8-7B37FEF69FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73694D69-F720-464B-80A8-7B37FEF69FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73694D69-F720-464B-80A8-7B37FEF69FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659A037B-9AC0-4CE2-B50D-04B01CA77D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659A037B-9AC0-4CE2-B50D-04B01CA77D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659A037B-9AC0-4CE2-B50D-04B01CA77D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659A037B-9AC0-4CE2-B50D-04B01CA77D62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{73694D69-F720-464B-80A8-7B37FEF69FAF} = {448F41F1-318B-473E-AE8B-422E3099FEFC}
+		{659A037B-9AC0-4CE2-B50D-04B01CA77D62} = {4204A6E1-BEB9-4EBA-8E38-A612E76079FD}
+	EndGlobalSection
+EndGlobal
