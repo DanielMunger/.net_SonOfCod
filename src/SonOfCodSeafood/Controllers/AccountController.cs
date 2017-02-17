@@ -39,12 +39,12 @@ namespace SonOfCodSeafood.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(string email)
+        public async Task<IActionResult> Register(string email, string username, string password )
         {
-            
 
-            var user = new ApplicationUser { UserName = email, Email = email};
-            IdentityResult result = await _userManager.CreateAsync(user);
+
+            var user = new ApplicationUser { UserName = username, Email = email };
+            IdentityResult result = await _userManager.CreateAsync(user, password);
             if (result.Succeeded)
             {
                 return RedirectToAction("Index");
@@ -67,7 +67,7 @@ namespace SonOfCodSeafood.Controllers
 
             if (result.Succeeded)
             {
-               // var user = await _userManager.GetUserAsync(User);
+                var user = await _userManager.GetUserAsync(User);
                 return RedirectToAction("Index");
             }
             else
