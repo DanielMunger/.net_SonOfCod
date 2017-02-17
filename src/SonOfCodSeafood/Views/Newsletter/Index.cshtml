@@ -2,3 +2,9 @@
     Layout = "_Layout";
 }
 <h1>Hello from Newsletter Index</h1>
+@foreach(var )
+<form asp-controller="Newsletter" asp-action="AddEmail" method="post">
+    <label>Join Our Newsletter!</label>
+    <input type="text" name="email"/>
+    <input class="btn" type="submit" value="Join"/>
+</form>

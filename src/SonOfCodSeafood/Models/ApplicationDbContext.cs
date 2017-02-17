@@ -13,7 +13,7 @@ namespace SonOfCodSeafood.Models
         {
 
         }
-
+        public DbSet<EmailListMember> EmailList { get; set; }
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
