@@ -208,3 +208,5 @@
 "C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\SonOfCodSeafood\src\SonOfCodSeafood\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\SonOfCodSeafood\src\SonOfCodSeafood\Models\ApplicationDbContext.cs"
 "C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\SonOfCodSeafood\src\SonOfCodSeafood\Models\ApplicationUser.cs"
+"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\SonOfCodSeafood\src\SonOfCodSeafood\ViewModels\Login.cs"
+"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\SonOfCodSeafood\src\SonOfCodSeafood\ViewModels\Register.cs"
