@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using SonOfCodSeafood.Models;
+using System.Diagnostics;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -26,15 +27,16 @@ namespace SonOfCodSeafood.Controllers
         }
         public IActionResult Index()
         {
-            return View(_db.EmailList.ToList());
+            return View(_db.EmailList.ToList()); // remove emiallist from return!!!
         }
         [HttpPost]
-        public async Task<IActionResult> AddEmail(string email)
+        public IActionResult AddEmail(string email)
         {
+            Debug.WriteLine("hello");
             EmailListMember newMember = new EmailListMember(email);
             _db.Add(newMember);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Newsletter");
         }
     }
 }

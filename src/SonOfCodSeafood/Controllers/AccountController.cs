@@ -7,6 +7,7 @@ using SonOfCodSeafood.ViewModels;
 using SonOfCodSeafood.Models;
 using Microsoft.AspNetCore.Identity;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -26,10 +27,18 @@ namespace SonOfCodSeafood.Controllers
             _signInManager = signInManager;
             _db = db;
         }
+        [Authorize]
         public IActionResult Index()
         {
-          
+          if(User.Identity.Name != null)
+            {
             return View();
+
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
             
         }
 
@@ -47,7 +56,7 @@ namespace SonOfCodSeafood.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, password);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
             else
             {
@@ -80,7 +89,7 @@ namespace SonOfCodSeafood.Controllers
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Home");
         }
 
        // public async Task<IActionResult> UserAccount()
