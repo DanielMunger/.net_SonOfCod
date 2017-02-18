@@ -27,7 +27,7 @@ namespace SonOfCodSeafood.Controllers
         }
         public IActionResult Index()
         {
-            return View(_db.EmailList.ToList()); // remove emiallist from return!!!
+            return View(); 
         }
         [HttpPost]
         public IActionResult AddEmail(string email)

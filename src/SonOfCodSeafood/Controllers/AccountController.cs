@@ -32,7 +32,8 @@ namespace SonOfCodSeafood.Controllers
         {
           if(User.Identity.Name != null)
             {
-            return View();
+                ViewBag.Emails = _db.EmailList.ToList();
+                return View();
 
             }
             else
@@ -92,15 +93,6 @@ namespace SonOfCodSeafood.Controllers
             return RedirectToAction("Index","Home");
         }
 
-       // public async Task<IActionResult> UserAccount()
-        //{
-          //  var user = await _userManager.GetUserAsync(User);
-            //string userId = user.Id;
-            //var userPhotos = _db.Photos
-           //     .Where(photos => photos.User.Id == userId);
-            //ViewBag.UserPhotos = userPhotos;
-            //return View(user);
-
-       // }
+      
     }
 }
